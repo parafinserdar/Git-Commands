@@ -1,111 +1,51 @@
-Git Komutları Kılavuzu
-Git, dağıtık bir sürüm kontrol sistemidir ve yazılım geliştirme süreçlerinde sürüm kontrolü için yaygın olarak kullanılır. İşte Git'in temel komutları ve bunların kullanımı hakkında detaylı bir kılavuz:
+1. git init
+Yeni bir Git deposu oluşturur. Bu komut, çalıştırıldığı dizinde bir .git klasörü oluşturur. Bu klasör, Git'in tüm deposuyla ilgili bilgilerini ve tarihçesini içerir.
 
-1. Depo Oluşturma ve Yönetme
 git init
-Yeni bir Git deposu oluşturur.
 
-bash
-Copy code
-git init
-git clone
-Uzak bir depoyu yerel bir kopya olarak klonlar.
+2. git clone
+Uzak bir Git deposundaki bir projeyi yerel makinenize kopyalar. Bu komut, uzak depodaki tüm dosyaları ve tarihçeyi yerel dizininize kopyalar.
 
-bash
-Copy code
-git clone <repo-url>
-git remote
-Uzak depoları yönetir.
+git clone <repo_url>
 
-bash
-Copy code
-git remote add <name> <repo-url>
-git remote -v
-2. Değişiklikleri Yönetme
-git add
-Çalışma dizininden değişiklikleri geçiş bölgesine ekler.
+3. git add
+Değişiklikleri bir sonraki commit'e hazırlar. Yeni dosyaları izlemeye alır veya değişen dosyaları staging alanına ekler.
 
-bash
-Copy code
-git add <file>
-git add .
-git commit
-Değişiklikleri onaylar ve bir git günlüğüne kaydeder.
+git add <dosya_adı>
 
-bash
-Copy code
-git commit -m "Commit message"
-git reset
-Değişiklikleri geri alır veya geçiş bölgesini temizler.
+4. git commit
+Staging alanında bulunan değişiklikleri yerel depoya kaydeder. Her commit, bir commit mesajı ile belirtilir.
 
-bash
-Copy code
-git reset <file>
-git reset --soft HEAD^
-3. Dal Yönetimi
-git branch
-Branşları yönetir ve listeler.
+git commit -m "commit_mesajı"
 
-bash
-Copy code
-git branch
-git branch <branch-name>
-git checkout
-Bir dalı değiştirir veya oluşturur.
+5. git push
+Yerel depodaki değişiklikleri uzak depoya gönderir.
 
-bash
-Copy code
-git checkout <branch-name>
-git checkout -b <new-branch>
-git merge
-Farklı dalları birleştirir.
+git push <uzak> <dallar>
 
-bash
-Copy code
-git merge <branch-name>
-git rebase
-Bir dala başka bir dalı yeniden taban alır.
+6. git pull
+Uzak depodaki değişiklikleri yerel depoya çeker ve birleştirir.
 
-bash
-Copy code
-git rebase <branch-name>
-4. Uzak Depo İşlemleri
-git fetch
-Uzak depodan güncellemeleri getirir.
+git pull <uzak> <dallar>
 
-bash
-Copy code
-git fetch
-git pull
-Uzak depodan değişiklikleri alır ve yerel dala birleştirir.
+7. git status
+Çalışma dizinindeki dosyaların durumunu gösterir. Hangi dosyaların değiştirildiğini, staging alanında olduğunu veya commit edilmeyi beklediğini gösterir.
 
-bash
-Copy code
-git pull <remote> <branch>
-git push
-Yerel değişiklikleri uzak depoya gönderir.
-
-bash
-Copy code
-git push <remote> <branch>
-5. Durumu İnceleme
 git status
-Çalışma dizinindeki dosya durumunu gösterir.
 
-bash
-Copy code
-git status
-git log
-Günlüğü gösterir, yani tarihli işlem geçmişini.
+8. git branch
+Mevcut dalları listeler. Hangi daldaysanız o dalın yanında "*" işareti ile belirtilir.
 
-bash
-Copy code
-git log
-git diff
-Dosya veya dallar arasındaki farkları gösterir.
+git branch
 
-bash
-Copy code
-git diff
-git diff <file>
-Bu, Git'in temel komutlarının bir özeti ve kullanımlarının basit bir açıklamasıdır. Daha fazla ayrıntı veya gelişmiş kullanım için Git'in resmi belgelerine veya "git --help" komutuna başvurabilirsiniz.
+9. git checkout
+Belirli bir dala geçiş yapar veya dosyaları geri yükler. Dalı değiştirmek için kullanılır veya belirli bir commit veya dalın durumuna geri dönmek için kullanılabilir.
+
+git checkout <dal_adı>
+
+10. git merge
+İki farklı daldaki değişiklikleri birleştirir. Birleştirme işlemi, iki dalın son ortak commit noktasını bulur ve değişiklikleri birleştirir.
+
+git merge <dal_adı>
+
+Bu komutlar Git'in temel işlevlerini kapsar. Git hakkında daha fazla bilgi edinmek için Git belgelerine veya çevrimiçi kaynaklara başvurabilirsiniz.
