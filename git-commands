@@ -1,0 +1,111 @@
+Git Komutları Kılavuzu
+Git, dağıtık bir sürüm kontrol sistemidir ve yazılım geliştirme süreçlerinde sürüm kontrolü için yaygın olarak kullanılır. İşte Git'in temel komutları ve bunların kullanımı hakkında detaylı bir kılavuz:
+
+1. Depo Oluşturma ve Yönetme
+git init
+Yeni bir Git deposu oluşturur.
+
+bash
+Copy code
+git init
+git clone
+Uzak bir depoyu yerel bir kopya olarak klonlar.
+
+bash
+Copy code
+git clone <repo-url>
+git remote
+Uzak depoları yönetir.
+
+bash
+Copy code
+git remote add <name> <repo-url>
+git remote -v
+2. Değişiklikleri Yönetme
+git add
+Çalışma dizininden değişiklikleri geçiş bölgesine ekler.
+
+bash
+Copy code
+git add <file>
+git add .
+git commit
+Değişiklikleri onaylar ve bir git günlüğüne kaydeder.
+
+bash
+Copy code
+git commit -m "Commit message"
+git reset
+Değişiklikleri geri alır veya geçiş bölgesini temizler.
+
+bash
+Copy code
+git reset <file>
+git reset --soft HEAD^
+3. Dal Yönetimi
+git branch
+Branşları yönetir ve listeler.
+
+bash
+Copy code
+git branch
+git branch <branch-name>
+git checkout
+Bir dalı değiştirir veya oluşturur.
+
+bash
+Copy code
+git checkout <branch-name>
+git checkout -b <new-branch>
+git merge
+Farklı dalları birleştirir.
+
+bash
+Copy code
+git merge <branch-name>
+git rebase
+Bir dala başka bir dalı yeniden taban alır.
+
+bash
+Copy code
+git rebase <branch-name>
+4. Uzak Depo İşlemleri
+git fetch
+Uzak depodan güncellemeleri getirir.
+
+bash
+Copy code
+git fetch
+git pull
+Uzak depodan değişiklikleri alır ve yerel dala birleştirir.
+
+bash
+Copy code
+git pull <remote> <branch>
+git push
+Yerel değişiklikleri uzak depoya gönderir.
+
+bash
+Copy code
+git push <remote> <branch>
+5. Durumu İnceleme
+git status
+Çalışma dizinindeki dosya durumunu gösterir.
+
+bash
+Copy code
+git status
+git log
+Günlüğü gösterir, yani tarihli işlem geçmişini.
+
+bash
+Copy code
+git log
+git diff
+Dosya veya dallar arasındaki farkları gösterir.
+
+bash
+Copy code
+git diff
+git diff <file>
+Bu, Git'in temel komutlarının bir özeti ve kullanımlarının basit bir açıklamasıdır. Daha fazla ayrıntı veya gelişmiş kullanım için Git'in resmi belgelerine veya "git --help" komutuna başvurabilirsiniz.
